@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap");
+:root {
+  --Dark-Blue-intro: hsl(217, 28%, 15%);
+  --Dark-Blue-main: hsl(218, 28%, 13%);
+  --Dark-Blue--footer: hsl(216, 53%, 9%);
+  --Dark-Blue--testimonials: hsl(219, 30%, 18%);
+  --Cyan: hsl(176, 68%, 64%);
+  --Blue: hsl(198, 60%, 50%);
+  --Light-Red: hsl(0, 100%, 63%);
+  --White: hsl(0, 0%, 100%);
+}
+
+@media (min-width: 375px) {
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  .MainBox {
+    background-color: var(--Dark-Blue-intro);
+    background-image: url(/images/bg-curvy-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: 0% 120%;
+    padding: 1rem;
+  }
+  .MainBox .NavList {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    font-size: 14px;
+    padding: 0.5rem;
+    font-family: 'Open Sans', sans-serif;
+  }
+  .MainBox .NavList .ContainerLogo .Logo {
+    width: 5rem;
+    margin-left: 0.2rem;
+  }
+  .MainBox .NavList .NavAnclas {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .MainBox .NavList .NavAnclas a {
+    font-size: 14px;
+    margin: 1rem 0.7rem;
+    text-decoration: none;
+    color: var(--White);
+  }
+  .MainBox .ContImg {
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 2rem;
+  }
+  .MainBox .ContImg .IntroIlus {
+    width: 300px;
+  }
+  .SectionOne {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: var(--Dark-Blue-main);
+  }
+  .SectionOne .Container-Box {
+    font-family: 'Raleway', sans-serif;
+  }
+  .SectionOne .Container-Box h1 {
+    color: var(--White);
+    font-size: 26px;
+    line-height: 2.4rem;
+  }
+  .SectionOne .Container-Box p {
+    color: var(--White);
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 1px;
+    margin: 1rem;
+    font-weight: 400;
+  }
+  .SectionOne .Container-Box .StartBtn {
+    color: var(--White);
+    background-color: var(--Cyan);
+    font-size: 14px;
+    font-weight: 700;
+    border: none;
+    padding: 0.9rem 5rem;
+    border-radius: 20px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

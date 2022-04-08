@@ -1,0 +1,122 @@
+// ## Typography
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap');
+// ### Body
+// font-family: 'Open Sans', sans-serif;
+// ### Headings, Call-to-actions, Header Navigation
+
+// font-family: 'Raleway', sans-serif;
+// ### Body Copy
+// - Font size: 14px
+
+// ## Colors
+
+:root{
+    // ### Primary
+--Dark-Blue-intro: hsl(217, 28%, 15%); //intro and email sign up background
+--Dark-Blue-main: hsl(218, 28%, 13%); //main background
+--Dark-Blue--footer: hsl(216, 53%, 9%); //footer background
+--Dark-Blue--testimonials: hsl(219, 30%, 18%); //testimonials background
+
+// ### Accent
+
+--Cyan: hsl(176, 68%, 64%); //inside call-to-action gradient
+--Blue: hsl(198, 60%, 50%); //inside call-to-action gradient
+--Light-Red: hsl(0, 100%, 63%); //error
+
+// ### Neutral
+
+--White: hsl(0, 0%, 100%);
+}
+
+
+// # Front-end Style Guide
+
+// ## Layouts
+
+// The designs were created to the following widths:
+
+// - Mobile: 375px
+// - Desktop: 1440px
+
+
+
+
+@media(min-width: 375px){
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    .MainBox{
+        background-color: var(--Dark-Blue-intro);
+        background-image: url(/images/bg-curvy-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: 0% 120%;
+        padding: 1rem;
+        .NavList{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 14px;
+            padding: 0.5rem;
+            font-family: 'Open Sans', sans-serif;
+        .ContainerLogo{
+            .Logo{
+                width: 5rem;
+                margin-left: 0.2rem;
+            }
+        }
+        .NavAnclas{
+            display: flex;
+            align-items: center;
+            a{
+                font-size: 14px;
+                margin: 1rem 0.7rem;
+                text-decoration: none;
+                color: var(--White);
+            }
+        }
+    }
+    .ContImg{
+        text-align: center;
+        align-items: center;
+        margin: 2rem;
+        .IntroIlus{
+            width: 300px;
+        }
+    }
+}
+    .SectionOne{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--Dark-Blue-main);
+        .Container-Box{
+            font-family: 'Raleway', sans-serif;
+
+            h1{
+                color: var(--White);
+                font-size: 26px;
+                line-height: 2.4rem;
+            }
+            p{
+                color: var(--White);
+                font-size: 14px;
+                text-align: center;
+                letter-spacing: 1px;
+                margin: 1rem;
+                font-weight: 400;
+            }
+            .StartBtn{
+                color: var(--White);
+                background-color: var(--Cyan);
+                font-size: 14px;
+                font-weight: 700;
+                border: none;
+                padding: 0.9rem 5rem;
+                border-radius: 20px;
+            }
+        }
+        }
+}
