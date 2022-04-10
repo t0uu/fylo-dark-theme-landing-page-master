@@ -73,6 +73,9 @@
                 margin: 1rem 0.7rem;
                 text-decoration: none;
                 color: var(--White);
+                &:hover{
+                    text-decoration: underline;
+                }
             }
         }
     }
@@ -131,11 +134,8 @@
         }
         .SectionTwo{
             display: flex;
-            // justify-content: center;
-            // align-items: center;
             flex-direction: column;
             background-color: var(--Dark-Blue-main);
-            // padding: 0.1rem;
             font-family: 'Raleway', sans-serif;
             .ContImgProduc{
                 text-align: center;
@@ -169,6 +169,11 @@
                 background-position: 100%;
                 width: 140px;
                 line-height: 1.5rem;
+                &:hover{
+                    color: var(--White);
+                    border-color:var(--White);
+                    background-image: url(/images/icon-arrow-white.svg);
+                }
             }
         }
         .ContainerArticle{
@@ -226,23 +231,43 @@
             margin: 1rem;
             position: relative;
             top: 5rem;
-            input{
-                padding: 1rem;
-                border: none;
-                border-radius: 20px;
-                margin: 1rem;
+            .ContainerEmailBtn{
+             display: flex;
+             flex-direction: column;
+             align-items: center;  
             }
+                input{
+                    padding: 1rem;
+                    border: none;
+                    border-radius: 20px;
+                    margin: 1rem;
+                }
             h2{
                 padding-top: 1rem;
             }
             p{
                 text-align:center;
             }
+            span{
+                color: var(--Light-Red);
+                font-size: 14px;
+                font-family: 'Raleway', sans-serif;
+            }
+            .success{
+                color: green;
+            }
             .Submit{
-                padding: 1rem;
+                padding: 1rem 2.4rem;
                 border: none;
                 border-radius: 20px;
-                margin: 1rem
+                margin: 1rem;
+                background-color: var(--Blue);
+                color: white;
+                font-family: 'Open Sans', sans-serif;
+                font-weight: 700;
+                &:hover{
+                    background-color: var(--Cyan);
+                }
             }
         }
         footer{
@@ -299,9 +324,13 @@
                     flex-direction: column;
                     margin: 1rem;
                     a{
-                        color: white;
+                        color: rgb(217, 213, 213);
                         text-decoration: none;
                         margin: 0.5rem 0rem;
+                        &:hover{
+                        color:var(--White);
+                           
+                        }
                     }
                 }
                 .RRSS{
@@ -319,9 +348,119 @@
                         width: 1rem;
                         padding: 0.5rem;
                         margin: 0.5rem;
+                        cursor: pointer;
+                        &:hover{
+                            color: var(--Cyan);
+                            border-color: var(--Cyan);
+                        }
                     }
                 }
             }
             
+        }
+    }
+
+
+    @media(min-width: 1024px){
+        .MainBox{
+            background-image: url(/images/bg-curvy-desktop.svg);
+            background-size:contain;
+            .NavList{
+                max-width: 1024px;
+                margin: auto;
+                .ContainerLogo{
+                    .Logo{
+                        width: 6rem;
+                    }
+                }
+                .NavAnclas{
+                    a{
+                        font-size: 18px;
+                    }
+            }
+            }
+            .ContImg{
+                margin: 3rem;
+                .IntroIlus{
+                    width: 600px;
+                }
+            }
+        }
+        .SectionOne{
+            .Container-Box{
+                margin: 3rem 4rem;
+            }
+            .ContainerData{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                align-items: center;
+            }
+        }
+        .SectionTwo{
+            .Container-Productive{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .ContImgProduc{
+                    .ProductiveImg{
+                        width: 500px;
+                    }
+                }
+                .Container-TextProductive{
+                    width: 400px;
+                    h2{
+                        margin-right: 5rem;
+                        font-size: 32px;
+                        letter-spacing: 1px;
+                    }
+                    p{
+                        letter-spacing: 2px;
+                    }
+                }
+            }
+            .ContainerArticle{
+                flex-direction: row;
+                .ArtBox{
+                    align-self: center;
+                }
+            }
+        }
+        form{
+            max-width: 800px;
+            margin: auto;
+            padding: 2rem;
+            .ContainerEmailBtn{
+                flex-direction: row;
+                input{
+                    
+                    padding: 1rem 12rem;
+                    text-align: center;
+                &::placeholder{
+                    position: relative;
+                    right: 100%;
+                }
+                }
+            }
+            .Submit{
+                margin: 0;
+            }
+        }
+        footer{
+            flex-direction: row;
+            .ContText{
+            max-width: 400px;
+            .ContainerImgFooter{
+                margin: 0;
+            }
+            }
+            .ContainerPhoneEmail{
+                flex-direction: column;
+                // position: relative;
+                // top: 4rem;
+                align-self: center;
+            }
+            nav{
+                flex-direction: row;
+            }
         }
     }

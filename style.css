@@ -54,6 +54,9 @@
     text-decoration: none;
     color: var(--White);
   }
+  .MainBox .NavList .NavAnclas a:hover {
+    text-decoration: underline;
+  }
   .MainBox .ContImg {
     text-align: center;
     -webkit-box-align: center;
@@ -162,6 +165,11 @@
     width: 140px;
     line-height: 1.5rem;
   }
+  .SectionTwo .ContainerBtn .FyloWorkBtn:hover {
+    color: var(--White);
+    border-color: var(--White);
+    background-image: url(/images/icon-arrow-white.svg);
+  }
   .SectionTwo .ContainerArticle {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -240,6 +248,18 @@
     position: relative;
     top: 5rem;
   }
+  form .ContainerEmailBtn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   form input {
     padding: 1rem;
     border: none;
@@ -252,11 +272,26 @@
   form p {
     text-align: center;
   }
+  form span {
+    color: var(--Light-Red);
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+  }
+  form .success {
+    color: green;
+  }
   form .Submit {
-    padding: 1rem;
+    padding: 1rem 2.4rem;
     border: none;
     border-radius: 20px;
     margin: 1rem;
+    background-color: var(--Blue);
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+  }
+  form .Submit:hover {
+    background-color: var(--Cyan);
   }
   footer {
     background-color: var(--Dark-Blue--footer);
@@ -350,9 +385,12 @@
     margin: 1rem;
   }
   footer nav .Ancla a {
-    color: white;
+    color: #d9d5d5;
     text-decoration: none;
     margin: 0.5rem 0rem;
+  }
+  footer nav .Ancla a:hover {
+    color: var(--White);
   }
   footer nav .RRSS {
     display: -webkit-box;
@@ -377,6 +415,143 @@
     width: 1rem;
     padding: 0.5rem;
     margin: 0.5rem;
+    cursor: pointer;
+  }
+  footer nav .RRSS i:hover {
+    color: var(--Cyan);
+    border-color: var(--Cyan);
+  }
+}
+
+@media (min-width: 1024px) {
+  .MainBox {
+    background-image: url(/images/bg-curvy-desktop.svg);
+    background-size: contain;
+  }
+  .MainBox .NavList {
+    max-width: 1024px;
+    margin: auto;
+  }
+  .MainBox .NavList .ContainerLogo .Logo {
+    width: 6rem;
+  }
+  .MainBox .NavList .NavAnclas a {
+    font-size: 18px;
+  }
+  .MainBox .ContImg {
+    margin: 3rem;
+  }
+  .MainBox .ContImg .IntroIlus {
+    width: 600px;
+  }
+  .SectionOne .Container-Box {
+    margin: 3rem 4rem;
+  }
+  .SectionOne .ContainerData {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .SectionTwo .Container-Productive {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .SectionTwo .Container-Productive .ContImgProduc .ProductiveImg {
+    width: 500px;
+  }
+  .SectionTwo .Container-Productive .Container-TextProductive {
+    width: 400px;
+  }
+  .SectionTwo .Container-Productive .Container-TextProductive h2 {
+    margin-right: 5rem;
+    font-size: 32px;
+    letter-spacing: 1px;
+  }
+  .SectionTwo .Container-Productive .Container-TextProductive p {
+    letter-spacing: 2px;
+  }
+  .SectionTwo .ContainerArticle {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .SectionTwo .ContainerArticle .ArtBox {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  form {
+    max-width: 800px;
+    margin: auto;
+    padding: 2rem;
+  }
+  form .ContainerEmailBtn {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  form .ContainerEmailBtn input {
+    padding: 1rem 12rem;
+    text-align: center;
+  }
+  form .ContainerEmailBtn input::-webkit-input-placeholder {
+    position: relative;
+    right: 100%;
+  }
+  form .ContainerEmailBtn input:-ms-input-placeholder {
+    position: relative;
+    right: 100%;
+  }
+  form .ContainerEmailBtn input::-ms-input-placeholder {
+    position: relative;
+    right: 100%;
+  }
+  form .ContainerEmailBtn input::placeholder {
+    position: relative;
+    right: 100%;
+  }
+  form .Submit {
+    margin: 0;
+  }
+  footer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  footer .ContText {
+    max-width: 400px;
+  }
+  footer .ContText .ContainerImgFooter {
+    margin: 0;
+  }
+  footer .ContainerPhoneEmail {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  footer nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 /*# sourceMappingURL=style.css.map */
